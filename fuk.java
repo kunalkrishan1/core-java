@@ -10,4 +10,10 @@ class fuk{
 
         System.out.println("hello world");
     }
-}
+}//without creating object non static variable cannot be accessed
+/*l3 day 2
+*objet always created in heap memory but the address of the object is stored in stack memory
+*the closing bracket of main method is the end of the program and the object created in heap memory will be destroyed by garbage collector
+*the garbage collector is a part of JVM which is responsible for destroying the object created in heap memory
+*the main method execution done will not get removed from stack it will popped off the stack memory and the program will be terminated,the address of object no longer present in stack so,you cant access those object and it will removed by garbage collector
+*/
