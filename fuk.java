@@ -163,14 +163,88 @@ System.out.println(name);
 }
 
 -----------------------------------------------------------------------------------------
+lecture 7 day 2
+
+constructor: it is a special type of method which is used to initialize the object.
+------------
+*constructor name should be same as class name and it should not have any return type.
+*whenever we create an object constructor will be called automatically and it will initialize the object.
+*if we use void keyword and then create a constructor it will be treated as a method not a constructor because constructor should not have any return type.
+
+class A {
+
+    A() {
+        // Constructor
+    }
+
+    void A() {
+        // Method
+    }
+}
 
 
+------------
+class a{
+a(){
+System.out.println("constructor called");}
+    public static void main(String[]args){
+        a a1=new a();
+        a a2=new a();
+        a a3 =new a();
+    }
+     ---------   -------------------------------------------------------------------------------
+        public class a{
+        a(int x){//*local variable x is created inside the constructor
+System.out.println(x);
+        }
+        System.out.println(x);//error because local variable x cannot be accessed outside the constructor
+        }
+        public static void main(String[]args){
+        a a1=new a(10); 
+        a a2=new a(20);
+        a a3=new a(30);
+        }
+}
 
 
+constructor can never return any value because it is void.
+---------------------------------------------------------------------------------------
+constructor overloading: it is a process of creating multiple constructor with different argument in the same class.
+
+class a{
+
+a()//no of args =0{
+System.out.println("constructor with no args");
+}
+a(int x)//no of args =1{
+System.out.println(x);
+}
+a (int x,int y)//no of args =2{
+System.out.println(x,y);
 
 
+}
+public static void main(String[]args){
+a a1=new a();
+a a2=new a(10);
+a a3=new a(10,20);
+}
+2ndd example:
 
-
+class a{
+ A(int x)//no of args =1{
+ type=Int
+ System.out.println(x);
+ }
+ A(boolean x,boolean y)//no of args =2{
+ System.out.println(x,y);
+ }
+public static void main(String[]args){
+ a a1=new a(10);
+ a a2=new a(true,false);
+ }
+}
+ ----------------------------------------------------------------------------------------------------
 
 
 
