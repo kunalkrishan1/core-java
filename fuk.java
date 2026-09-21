@@ -245,11 +245,74 @@ public static void main(String[]args){
  }
 }
  ----------------------------------------------------------------------------------------------------
+LECTURE 8 DAY 3
+-----------------------------------
+THIS KEYWORD: it is used to refer current class instance variable.
+*it is used to differentiate between local variable and instance variable when they have same name.
+*specal refrence variable that hold object address
+*using rhis keyword we can access the non static members of the class
 
+A a1 = new A();
+      ↓
+Object created
 
+a1.test1();
+      ↓
+test1() starts
+      ↓
+this = current A object
+      ↓
+this.test2();
+      ↓
+same A object's test2()
+      ↓
+From Test 2
 
+program1    
+--------
+class a{
+            public static void main(String[]args){
+                a a1=new a();
+                a1.test1();
 
+                a a2=new a();
+                a2.test1();
+                a1.test1();
+                {
+                public void test1(){
+                System.out.println("from test1");}
+        }
+-------------------------
+limitation : we cannot use this keyword inside static method because static method belongs to class and it is not dependent on object but this keyword is used to refer 
+current class instance variable which is dependent on object so, we cannot use this keyword inside static method.
 
+-------------
+program 2
+class a{
+        public static void main(String[]args){
+        a a1=new a();
+        a1.test1();
+        {
+        public static void test1(){
+        System.out.println(this);//error because this keyword cannot be used inside static method
+        }
+        }
+ ----------------------------------------------------------
+ program 3:
+
+ class a{
+       static int x=10;
+       public static void main(String[]args){
+}
+       public void test1(){
+       System.out.println(this.x);this .x---> converted into a.x but this is a wrong approach 
+        
+       
+       }
+
+ }//earlier i was using a method .using inside a method u can do,but acessing a static member u can do but this is the wrong approach .
+
+---------------------------------------------------------------------
 
 
 
