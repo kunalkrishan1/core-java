@@ -313,6 +313,71 @@ class a{
  }//earlier i was using a method .using inside a method u can do,but acessing a static member u can do but this is the wrong approach .
 
 ---------------------------------------------------------------------
+lecture 9 day 3
+------------this keyword in depth:
+this.nonStatic memeber: it is used to access non static member of the class.
+*this() is used to call current class constructor.
+note:we cannot call constructor using this from a method.
+
+program 1:
+
+class Aa {
+
+    Aa(int x) {
+        System.out.println(x);
+    }
+
+    Aa() {
+        this(100);
+        System.out.println(050);
+    }
+
+    public static void main(String[] args) {
+        Aa a1 = new Aa();
+    }
+}
+    ----------------------------------------------------
+    constructor channing :
+    one construtor call another constructor in same class cqlled constructor channing.
+class a{
+a(int x,int y){
+System.out.println(x);
+System.out.println(y);
+}
+a(int x){
+this(300,400);
+}
+a(){
+this(100);//first statement while calling constructor
+}
+public static void main(String[]args){
+a a1= new a();}
+}
+
+-----------------------------------------------------------------------------
+program 2
+
+class info {
+   info(int var1, int var2) {
+      System.out.println(var1);
+      System.out.println(var2);
+   }
+
+   info(int var1) {
+      this(100, 200);
+      System.out.println(var1);
+   }
+
+   info() {
+      this(5);
+   }
+
+   public static void main(String[] var0) {
+      new info();
+   }
+}
+----------------------------------------------------------------------------------
+
 
 
 
