@@ -377,13 +377,107 @@ class info {
    }
 }
 ----------------------------------------------------------------------------------
+lecture 10 : 
+IIB(Instance inisalisation block)
+* everytime we create object iib is called.
+*iib will execute before construtor when object is created
 
 
+program 1:
 
+class iib{
+{
+System.out.println("iib");
+}
+public static void main(String[]args){
+iib a1= iib();
+iib a2 =iib();
+}
+}
 
+----------------------------------------------------------------------------------
+program 2:
+class iib2{
+iib(){
+System.out.println("constructor");
+}
+{
+System.out.println("iib");
+}
+public static void main(String[]args){
+iib2 a1=new iib2;
+iib2 a2=new iib2;
+}
+}
 
+//if we have more than iib it will run in sequence
+-----------------------------------------------------------------------------------------------
+program 3 :
 
+class a{
+String condition;
+{
+condition= "yes";
+}
+public static void main(String[]args){
+a a1=new a();
+System.out.println(a1.condition);
+}
+}
+------------------------------------------------------------------------------
+class a{
+String condition;
+int x=50;
+{
+if(x==10){
+ condition="yes";
+ }else{
+    condition="no";
+}
+}
+public static void main(String[]args){
+a a1 =new a();
+System.out.println(a1.condition);
+ }
 
+}
+
+--------------------------------------------------------------------------------------------
+SIB(static inislisation block)
+-> sib will run automatically before main method
+-> if we create more than one sib then it will run in sequence .
+
+------------------------------------------------
+Why use it?
+
+Mainly for initializing static variables or performing some setup that should happen only once when the class is loaded.
+
+class Student {
+
+    static int age;
+
+    static {
+        age = 20;
+        System.out.println("Static initialization");
+    }
+
+    public static void main(String[] args) {
+        System.out.println(age);
+    }
+}
+
+program 1:
+
+class a{
+static{
+System.out.println("sib");
+}
+public static void main(String[]args){
+System.out.println("main");
+}
+
+} 
+------------------------------------------------------------
 
 
 
