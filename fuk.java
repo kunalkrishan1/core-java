@@ -478,8 +478,78 @@ System.out.println("main");
 
 } 
 ------------------------------------------------------------
+DAY 4 LECTURE 11;
 
+JDK,JVM,JRE,CLASS,BYTE CODE,
+-------------------------------------------------------------------
+LECTURE 12;
+default construtor :
 
+it is no arugment construtor provided by java
+*everytime object is created default construtor is called
+
+Default Constructor in Java
+A default constructor is provided by the Java compiler, not directly by Java/JVM.
+It is a no-argument constructor.
+The compiler provides it only when you don't write any constructor yourself.
+When an object is created, a constructor is invoked automatically.
+
+Example:
+
+class Student {
+    // No constructor written
+}
+
+class Main {
+    public static void main(String[] args) {
+        Student s = new Student();
+    }
+}
+
+Here, the compiler effectively provides:
+
+Student() {
+    super();
+}
+
+So new Student() calls that constructor.
+
+⚠️ Important distinction
+
+No-argument constructor ≠ always default constructor.
+
+class Student {
+    Student() {              // programmer-written no-arg constructor
+        System.out.println("Hello");
+    }
+}
+
+This is a no-argument constructor, but technically not a default constructor, because you wrote it yourself.
+
+Easy rule:
+
+No constructor written → compiler gives default constructor.
+Constructor written by you → compiler does NOT give the default constructor.
+
+Constructor limitations
+
+Constructors don't have a return type.
+They cannot be static, final, abstract, etc.
+Constructor name must match the class name.
+Constructors are not inherited.
+
+Managing constructor errors
+
+What happens when constructors are overloaded incorrectly.
+How Java chooses which constructor to call.
+Common compile-time errors.
+
+Complex constructor rules
+
+this() constructor chaining.
+super() constructor chaining.
+this() / super() must be the first statement.
+How constructors behave with inheritance.
 
 
 
