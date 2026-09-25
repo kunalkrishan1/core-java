@@ -552,8 +552,26 @@ this() / super() must be the first statement.
 How constructors behave with inheritance.
 
 
+*when we donot create constructor in .java file then during compilation autmatically empty body no args constructor is added in .class file
+and hence object is created with zero parameters we d not see any error.
+*default construtor are always no args constructor
 
-
+class a{
+public static void main (String[]args){
+a a1=new a(100);//this thing dont work here u need to create a constructor explicitly otherwise error occurs
+}}
+-----------------
+program 2: 
+class a{
+a(intx){
+}
+public static void main(String[]args){
+  a a1=new a(100);
+  a a2 =new a();
+  }
+  }
+  //the default constructor will not become applicable when an abject with parameter and object without parameter are being created together.
+  so you want to overcome the error u need to created constructor matching to it.
 
 
 
